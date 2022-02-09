@@ -1,11 +1,62 @@
 import Head from 'next/head';
 import styled from 'styled-components';
+import * as layout from '../constants/layout';
+import * as palette from '../constants/palette';
 import { between } from 'polished';
 
+/*
+between: (fromSize: (string | number), toSize: (string | number), minScreen: string, maxScreen: string)
+*/
 
-//between(fromSize: (string | number), toSize: (string | number), minScreen: string, maxScreen: string)
+const Wrapper = styled.div`
+  height: 100%;
+  width: 100%;
+  padding: 5px 10px;
+`;
+
+const BigBlock = styled.div`
+  height: ${between('350px', '700px', layout.MIN_SCREEN, layout.MAX_SCREEN)};
+  width: 100%;
+  background: ${palette.LIGHT_GREEN};
+`;
+
+const Hamburger = styled.div`
+  height: 100px;
+  width: 100px;
+  margin-left: 10%;
+  padding-top: 5%;
+
+  .top {
+    width: 70%;
+    border-bottom: 6px solid black;
+    margin-bottom: 10%;
+
+    @media (max-width: 650px) {
+      width: 60%;
+      border-bottom: 4px solid black;
+    }
+  }
+
+  .bottom {
+    width: 50%;
+    border-bottom: 6px solid black;
+
+    @media (max-width: 650px) {
+      width: 40%;
+      border-bottom: 4px solid black;
+    }
+  }
+`;
+
+
 const TextDiv = styled.div`
-  font-size: ${between('20px', '100px', '320px', '1200px')};
+  font-size: ${between('26px', '52px', layout.MIN_SCREEN, layout.MAX_SCREEN)};
+  font-weight: 500;
+  color: ${palette.DARK_GREEN};
+  padding: 20% 0% 0 10%;
+  .light-text {
+    color: ${palette.WHITE}
+  }
 `;
 
 export default function Home() {
@@ -17,10 +68,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      Hello World at 16px
-      <TextDiv>
-        Hello World
-      </TextDiv>
+      <Wrapper>
+        <BigBlock>
+          <Hamburger>
+            <div className='top'></div>
+            <div className='bottom'></div>
+          </Hamburger>
+          <TextDiv>
+            <p>Hello World</p>
+            <p>welcome to</p>
+            <p>my <span className='light-text'>world</span></p>
+          </TextDiv>
+        </BigBlock>
+      </Wrapper>
     </>
   )
 }
