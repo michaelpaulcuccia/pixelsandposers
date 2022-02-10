@@ -50,7 +50,7 @@ const Hamburger = styled.div`
 `;
 
 const TextContainer = styled.div`
-  font-size: ${between('26px', '52px', layout.MIN_SCREEN, layout.MAX_SCREEN)};
+  font-size: ${between('32px', '56px', layout.MIN_SCREEN, layout.MAX_SCREEN)};
   font-weight: 500;
   color: ${palette.DARK_GREEN};
   padding: 20% 0% 0 10%;

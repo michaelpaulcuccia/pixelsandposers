@@ -26,7 +26,9 @@ export default function Home() {
         bottomline='my'
         lighttext='world'
        />
-       <Primarybutton />
+       <Primarybutton
+        content='Start Survey'
+       />
       </Wrapper>
     </>
   )
