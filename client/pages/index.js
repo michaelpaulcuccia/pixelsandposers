@@ -2,6 +2,7 @@ import Head from 'next/head';
 import styled from 'styled-components';
 import Bigblock from '../components/bigblock';
 import Primarybutton from '../components/primarybutton';
+import Fullbar from '../components/fullbar';
 
 const Wrapper = styled.div`
   height: 100%;
@@ -9,6 +10,7 @@ const Wrapper = styled.div`
   padding: 5px 10px;
   position: relative;
 `;
+
 
 export default function Home() {
   return (
@@ -27,9 +29,9 @@ export default function Home() {
         lighttext='world'
        />
        <Primarybutton
-        content='Start Survey'
+        content='Learn More'
        />
-      </Wrapper>
+      </Wrapper>   
     </>
   )
 }

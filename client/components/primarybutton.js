@@ -10,6 +10,7 @@ const Wrapper = styled.div`
     position: absolute;
     bottom: -7.5%;
     left: 10%;
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;

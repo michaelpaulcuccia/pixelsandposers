@@ -9,7 +9,6 @@ between: (fromSize: (string | number), toSize: (string | number), minScreen: str
 */
 
 const Wrapper = styled.div`
-  height: ${between('350px', '700px', layout.MIN_SCREEN, layout.MAX_SCREEN)};
   width: 100%;
   background: ${palette.LIGHT_GREEN};
 `;
@@ -53,7 +52,7 @@ const TextContainer = styled.div`
   font-size: ${between('32px', '56px', layout.MIN_SCREEN, layout.MAX_SCREEN)};
   font-weight: 500;
   color: ${palette.DARK_GREEN};
-  padding: 20% 0% 0 10%;
+  padding: 15% 0% 15% 10%;
   .light-text {
     color: ${palette.WHITE}
   }
