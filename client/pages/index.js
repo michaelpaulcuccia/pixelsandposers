@@ -8,6 +8,14 @@ const Wrapper = styled.div`
   width: 100%;
   padding: 5px 10px;
   position: relative;
+  margin: 0 auto;
+  max-width: 1366px;
+`;
+
+const Test = styled.div`
+  height: 100px;
+  width: 100vw;
+  background: yellow;
 `;
 
 export default function Home() {
@@ -30,6 +38,7 @@ export default function Home() {
         content='Learn More'
        />
       </Wrapper>   
+      <Test />
     </>
   )
 }
