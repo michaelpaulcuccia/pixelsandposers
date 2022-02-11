@@ -2,11 +2,12 @@ import Head from 'next/head';
 import styled from 'styled-components';
 import Bigblock from '../components/bigblock';
 import Primarybutton from '../components/primarybutton';
+import Fullwidth from '../components/fullwidth';
 
 const Wrapper = styled.div`
   height: 100%;
   width: 100%;
-  padding: 5px 10px;
+  padding: 5px 0px;
   position: relative;
   margin: 0 auto;
   max-width: 1366px;
@@ -38,7 +39,7 @@ export default function Home() {
         content='Learn More'
        />
       </Wrapper>   
-      <Test />
+      <Fullwidth/>
     </>
   )
 }
