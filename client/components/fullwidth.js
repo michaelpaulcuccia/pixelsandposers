@@ -10,19 +10,30 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: ${palette.LIGHT_GRAY};
+  background: ${bgColor => {
+      console.log(bgColor.bgColor)
+      if (bgColor.bgColor === 'blend') {
+        return `radial-gradient(circle at 23% 0px, ${palette.LIGHT_GRAY}, ${palette.LIGHT_BLACK} 86%)`;
+      } else {
+        return palette.LIGHT_GRAY;
+      }
+    }
+  };
 `;
 
 const Interior = styled.div`
     height: 100%;
     width: ${layout.MAX_SCREEN};
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
-export default function Fullwidth() {
+export default function Fullwidth({children, bgColor}) {
   return (
-    <Wrapper>
+    <Wrapper bgColor={bgColor}>
         <Interior>
-
+          {children}
         </Interior>
     </Wrapper>
   )

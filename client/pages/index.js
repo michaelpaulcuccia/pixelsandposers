@@ -13,12 +13,6 @@ const Wrapper = styled.div`
   max-width: 1366px;
 `;
 
-const Test = styled.div`
-  height: 100px;
-  width: 100vw;
-  background: yellow;
-`;
-
 export default function Home() {
   return (
     <>
@@ -39,7 +33,12 @@ export default function Home() {
         content='Learn More'
        />
       </Wrapper>   
-      <Fullwidth/>
+      <Fullwidth bgColor='blend'>
+        <h1>Hello World</h1>
+      </Fullwidth>
+      <Fullwidth>
+        <h1>Hello Universe</h1>
+      </Fullwidth>
     </>
   )
 }
