@@ -29,7 +29,7 @@ const Interior = styled.div`
     align-items: center;
 `;
 
-export default function Fullwidth({children, bgColor}) {
+export default function Fullwidth({ children, bgColor }) {
   return (
     <Wrapper bgColor={bgColor}>
         <Interior>

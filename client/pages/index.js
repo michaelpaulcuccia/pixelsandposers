@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Bigblock from '../components/bigblock';
 import Primarybutton from '../components/primarybutton';
 import Fullwidth from '../components/fullwidth';
+import Textblock from '../components/textblock';
 
 const Wrapper = styled.div`
   height: 100%;
@@ -37,7 +38,10 @@ export default function Home() {
         <h1>Hello World</h1>
       </Fullwidth>
       <Fullwidth>
-        <h1>Hello Universe</h1>
+          <Textblock
+            maintext={`Hello <span>World</span> <br/> This is my first line of main-text <br/> And here is another line of main-text`}
+            shorttext={`The <span>world</span> is yours for the taking`}
+          />
       </Fullwidth>
     </>
   )
