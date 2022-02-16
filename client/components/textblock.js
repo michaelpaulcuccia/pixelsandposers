@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import * as palette from '../constants/palette';
+import { createMarkup } from '../utils/functions';
 
 const Wrapper = styled.div`
     width: 100%;
@@ -38,8 +39,8 @@ export default function Textblock({maintext, shorttext}) {
   return (
     <Wrapper>
         <ContentWrapper>
-            <h2 className='main-text'>{maintext}</h2>
-            <p className='short-text'>{shorttext}</p>
+            {maintext && <h2 className='main-text' dangerouslySetInnerHTML={createMarkup(maintext)}></h2>}
+            {shorttext && <p className='short-text' dangerouslySetInnerHTML={createMarkup(shorttext)}></p>}
         </ContentWrapper>
     </Wrapper>
   )
