@@ -14,8 +14,10 @@ const Wrapper = styled.div`
       console.log(bgColor.bgColor)
       if (bgColor.bgColor === 'blend') {
         return `radial-gradient(circle at 23% 0px, ${palette.LIGHT_GRAY}, ${palette.LIGHT_BLACK} 86%)`;
-      } else {
+      } else if (bgColor.bgColor === 'lightgray') {
         return palette.LIGHT_GRAY;
+      } else {
+        return palette.WHITE;
       }
     }
   };
@@ -25,8 +27,12 @@ const Interior = styled.div`
     height: 100%;
     width: ${layout.MAX_SCREEN};
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-flow: row wrap; //none
+    justify-content: space-between;
+    align-items: stretch;
+    //MAKE THIS DIFFERENCE A PROP
+    /* justify-content: center;
+    align-items: center; */
 `;
 
 export default function Fullwidth({ children, bgColor }) {
