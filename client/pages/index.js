@@ -2,8 +2,9 @@ import Head from 'next/head';
 import styled from 'styled-components';
 import Bigblock from '../components/bigblock';
 import Primarybutton from '../components/primarybutton';
-import Fullwidth from '../components/fullwidth';
+import Fullwidth from '../components/layouts/fullwidth';
 import Textblock from '../components/textblock';
+import Cardgrid from '../components/layouts/cardgrid';
 import Card from '../components/card';
 
 //SVGs
@@ -52,9 +53,11 @@ export default function Home() {
           />
       </Fullwidth>
       <Fullwidth>
-        <Card image={phone} text='Feel free to give us a call anytime! We would be happy to speak with you!'/>
-        <Card image={convo} text='Feel free to send us a tex anytime! We would be happy to chat with you!'/>
-        <Card image={check} text='Our fact checkers are hard at work ensuring truth!'/>
+        <Cardgrid>
+          <Card image={phone} text='Feel free to give us a call anytime! We would be happy to speak with you!'/>
+          <Card image={convo} text='Feel free to send us a tex anytime! We would be happy to chat with you!'/>
+          <Card image={check} text='Our fact checkers are hard at work ensuring truth!'/>
+        </Cardgrid> 
       </Fullwidth>
     </>
   )

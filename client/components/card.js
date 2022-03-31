@@ -5,7 +5,7 @@ import * as palette from '../constants/palette';
 
 const CardWrapper = styled.div`
     min-height: 300px; 
-    width: 30%;
+    max-width: 300px;
     margin: 5px;
     border: 1px solid ${palette.LIGHT_BLACK};
     padding: 5px;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import * as layout from '../constants/layout';
-import * as palette from '../constants/palette';
+import * as layout from '../../constants/layout';
+import * as palette from '../../constants/palette';
 
 const Wrapper = styled.div`
   min-height: 150px;
