@@ -1,21 +1,44 @@
 import React from 'react';
+import Image from 'next/image';
 import styled from 'styled-components';
-//import * as layout from '../constants/layout';
 import * as palette from '../constants/palette';
 
-const Wrapper = styled.div`
-    height: 300px; //update to be fluid
-    min-width: 45%; //two in a container
+const CardWrapper = styled.div`
+    min-height: 300px; 
+    width: 30%;
     margin: 5px;
     border: 1px solid ${palette.LIGHT_BLACK};
-    padding: 15px;
+    padding: 5px;
     box-shadow: 3px 3px 5px 1px rgba(102,102,102,0.7);
 `;
 
-export default function Card() {
+const IconContainer = styled.div`
+  width: 20%; //a bit of a hack to get the Image aligned to left
+  display: flex;
+  max-height: 75px;
+`;
+
+const DivideBar = styled.div`
+  width: 100%;
+  margin: 10px 0;
+  border-bottom: 4px solid #ccc;
+`;
+
+const TextArea = styled.div`
+  color: 000;
+  width: 60%;
+`;
+
+export default function Card({image, text}) {
   return (
-    <Wrapper>
-        Hello, I'm a Card!
-    </Wrapper>
+    <CardWrapper>
+        <IconContainer>
+          <Image src={image} />
+        </IconContainer>
+        <DivideBar />
+        <TextArea>
+          {text}
+        </TextArea>
+    </CardWrapper>
   )
 }

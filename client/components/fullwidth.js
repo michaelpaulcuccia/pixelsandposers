@@ -11,7 +11,6 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   background: ${bgColor => {
-      console.log(bgColor.bgColor)
       if (bgColor.bgColor === 'blend') {
         return `radial-gradient(circle at 23% 0px, ${palette.LIGHT_GRAY}, ${palette.LIGHT_BLACK} 86%)`;
       } else if (bgColor.bgColor === 'lightgray') {
@@ -29,10 +28,7 @@ const Interior = styled.div`
     display: flex;
     flex-flow: row wrap; //none
     justify-content: space-between;
-    align-items: stretch;
-    //MAKE THIS DIFFERENCE A PROP
-    /* justify-content: center;
-    align-items: center; */
+    align-items: stretch;   
 `;
 
 export default function Fullwidth({ children, bgColor }) {

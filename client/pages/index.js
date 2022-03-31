@@ -6,6 +6,11 @@ import Fullwidth from '../components/fullwidth';
 import Textblock from '../components/textblock';
 import Card from '../components/card';
 
+//SVGs
+import phone from '../public/images/phone.svg';
+import convo from '../public/images/convo.svg';
+import check from '../public/images/check.svg';
+
 const Wrapper = styled.div`
   height: 100%;
   width: 100%;
@@ -36,7 +41,9 @@ export default function Home() {
        />
       </Wrapper>   
       <Fullwidth bgColor='blend'>
-        <h1>Welcome World Travelers</h1>
+        <Textblock 
+          maintext={`<h2>Welcome World Travelers</h2>`}
+        />
       </Fullwidth>
       <Fullwidth bgColor='lightgray'>
           <Textblock
@@ -45,8 +52,9 @@ export default function Home() {
           />
       </Fullwidth>
       <Fullwidth>
-        <Card/>
-        <Card/>
+        <Card image={phone} text='Feel free to give us a call anytime! We would be happy to speak with you!'/>
+        <Card image={convo} text='Feel free to send us a tex anytime! We would be happy to chat with you!'/>
+        <Card image={check} text='Our fact checkers are hard at work ensuring truth!'/>
       </Fullwidth>
     </>
   )
