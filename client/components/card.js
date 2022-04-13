@@ -15,25 +15,26 @@ const CardWrapper = styled.div`
 const IconContainer = styled.div`
   width: 20%; //a bit of a hack to get the Image aligned to left
   display: flex;
-  max-height: 75px;
 `;
 
 const DivideBar = styled.div`
   width: 100%;
   margin: 10px 0;
-  border-bottom: 4px solid #ccc;
+  border-bottom: 2px solid #ccc;
 `;
 
 const TextArea = styled.div`
   color: 000;
   width: 60%;
+  padding-left: 10px;
+  font-size: 22px;
 `;
 
 export default function Card({image, text}) {
   return (
     <CardWrapper>
         <IconContainer>
-          <Image src={image} />
+          <Image src={image} height={100} width={100}/>
         </IconContainer>
         <DivideBar />
         <TextArea>
